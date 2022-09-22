@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace TallEcommerce\Product;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use TallEcommerce\Product\Commands\ProductCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class ProductServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('product')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_product_table')
+            ->hasCommand(ProductCommand::class);
     }
 }

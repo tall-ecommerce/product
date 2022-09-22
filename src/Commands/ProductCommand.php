@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace TallEcommerce\Product\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ProductCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'product';
 
     public $description = 'My command';
 
