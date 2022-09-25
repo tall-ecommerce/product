@@ -2,9 +2,8 @@
 
 namespace TallEcommerce\Product\Database\Factories;
 
-use TallEcommerce\Product\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use TallEcommerce\Product\Models\Product;
 
 class ProductFactory extends Factory
 {

@@ -1,4 +1,5 @@
 <?php
+
 namespace TallEcommerce\Product\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,12 +10,12 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
-        'code', 
-        'name', 
+        'code',
+        'name',
         'metadata',
     ];
 
     protected $casts = [
-        'metadata' => 'array'
+        'metadata' => 'array',
     ];
 }
