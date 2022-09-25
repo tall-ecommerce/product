@@ -8,12 +8,27 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('product_table', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
-
+            $table->unsignedBigInteger("tenant_id")->default(1)->index();
+            $table->string("code")->index();
+            $table->string("name");
             // add fields
-
+            $table->json("metadata");
             $table->timestamps();
+            $table->softDeletes();
+        });
+
+        Schema::create('properties', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger("tenant_id")->default(1)->index();
+            $table->unsignedBigInteger("product_id")->index();
+            $table->string("key");
+            $table->string("value");
+            // add fields
+            $table->json("metadata");
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 };

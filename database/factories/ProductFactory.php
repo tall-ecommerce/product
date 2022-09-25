@@ -2,12 +2,13 @@
 
 namespace TallEcommerce\Product\Database\Factories;
 
+use TallEcommerce\Product\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/*
-class ModelFactory extends Factory
+
+class ProductFactory extends Factory
 {
-    protected $model = YourModel::class;
+    protected $model = Product::class;
 
     public function definition()
     {
@@ -16,4 +17,3 @@ class ModelFactory extends Factory
         ];
     }
 }
-*/
